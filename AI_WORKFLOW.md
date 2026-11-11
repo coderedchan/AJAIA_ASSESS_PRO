@@ -49,7 +49,8 @@ The lesson for the AI-written tests was that they only covered the paths that we
 - **Persistence:** after the browser run, the Docker container was restarted with a mounted volume, and the documents created during the run were still listed for Alex.
 - **Visual review:** the 12 screenshots in `screenshots/` were regenerated after the fixes and checked at desktop width and phone width.
 - **Prose check:** `scripts/check_prose.py` scans every document, template, script, and Python file for em dashes, "X is X" sentences, inflated verbs, negative parallelism, and runs of near-identical bullets. It reports 0 issues. A pattern scan does not catch everything, so the text was also read through.
-- **Not verified here:** the live deployment, the Google Drive folder, and the walkthrough video. These need my accounts and are checked separately before submitting.
+- **Live deployment:** the same browser check passed against https://relay-docs-w94c.onrender.com on Render's free plan. Restarting the service afterwards returned the data to the seeded state, which confirms the documented reset behaviour.
+- **Not verified here:** the Google Drive folder and the walkthrough video, which are prepared separately before submitting.
 - **Remaining limits:** there is no live merging of simultaneous edits, and the free Render plan resets the data on restart. Both are explained in `ARCHITECTURE.md`.
 
 ## Follow-up wording review

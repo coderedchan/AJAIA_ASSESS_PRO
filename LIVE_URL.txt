@@ -1,1 +1,1 @@
-TODO: paste the deployed Relay Docs URL here, for example https://relay-docs.onrender.com
+https://relay-docs-w94c.onrender.com

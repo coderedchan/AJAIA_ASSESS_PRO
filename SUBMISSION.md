@@ -3,7 +3,8 @@
 ## Reviewer links
 
 - Google Drive folder: TODO, add the folder link after uploading.
-- Live application: see `LIVE_URL.txt`.
+- Live application: https://relay-docs-w94c.onrender.com (also in `LIVE_URL.txt`). The free instance sleeps when idle, so the first request can take up to a minute.
+- Source repository: https://github.com/coderedchan/AJAIA_ASSESS_PRO
 - Walkthrough video: see `WALKTHROUGH_URL.txt`.
 
 ## Demo accounts
@@ -54,11 +55,11 @@ See `README.md`. The application is in `source/`. After installing, run `flask -
 - Docker container restarted with a volume: documents created before the restart were still listed.
 - A separate review of the package (`docs/SUBMISSION_REVIEW.md`, not included in this folder) found four defects: simultaneous saves could overwrite each other, a handoff could be returned while edits had failed to save, a focus refresh cleared handoff text, and import and save used different size limits. All four are fixed, each with a check that fails without the fix. Details are in `AI_WORKFLOW.md`.
 - `python scripts/check_prose.py ..`: 0 issues.
-- Deployed checks: TODO, run the review flow above on the live URL after deployment.
+- Deployed checks: the full browser check passed against https://relay-docs-w94c.onrender.com on 2026-11-10 (sign-in, formatting and reload, sharing, handoff and return, failed-save blocking, Jordan refused, import, save conflict, and phone layout). The service was then restarted, which returned the data to the seeded demo state.
 
 ## Completion status
 
 - **Working:** every core requirement (create, rename, rich text, autosave and reopen, import, ownership, sharing with owned and shared views, and persistence) and the review request with "Needs your attention". Also working: save-conflict detection that holds for simultaneous saves, handoff actions that wait for edits to be saved, access removal, and a phone-width layout.
-- **Not yet done:** deployment, the walkthrough recording, and the Drive upload. The TODO lines above and in the two URL files mark them.
+- **Not yet done:** the walkthrough recording and the Drive upload. The TODO lines above and in `WALKTHROUGH_URL.txt` mark them.
 - **Limits:** no merging of simultaneous edits (a conflict is detected and the user chooses a version), mocked sign-in, and no deletion or view-only role. Data survives restarts when the SQLite file is on persistent storage. On the free Render plan it is not, so the data resets to the seeded state when the service restarts.
 - **Next 2 to 4 hours:** persistent hosting storage, a "changed since handoff" diff for the owner, periodic refresh of the card and dashboard, then a view-only role and deletion. Details are in `ARCHITECTURE.md`.

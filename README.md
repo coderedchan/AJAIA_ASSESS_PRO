@@ -4,7 +4,7 @@ Relay Docs lets teammates write documents, share them, and request a review.
 
 Choose someone who already has access, add a note about what to check, and send the request. They can edit the document and send it back with a reply. Requests move through Draft, Awaiting response, and Returned. The person who created the document keeps control of sharing throughout.
 
-Live application and walkthrough links are in `LIVE_URL.txt` and `WALKTHROUGH_URL.txt`.
+Live application: https://relay-docs-w94c.onrender.com. It runs on Render's free plan, so the first request after an idle period can take up to a minute while the instance starts. The walkthrough link is in `WALKTHROUGH_URL.txt`.
 
 ## What works
 

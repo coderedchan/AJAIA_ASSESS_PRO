@@ -1,0 +1,14 @@
+# Render Blueprint: New > Blueprint > select this repository.
+# The free plan has no persistent disk, so the SQLite file resets to the seeded
+# demo data whenever the service restarts or redeploys. See ARCHITECTURE.md.
+services:
+  - type: web
+    name: relay-docs
+    runtime: docker
+    plan: free
+    dockerfilePath: ./source/Dockerfile
+    dockerContext: ./source
+    healthCheckPath: /healthz
+    envVars:
+      - key: RELAY_SECRET_KEY
+        generateValue: true

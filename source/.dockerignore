@@ -1,0 +1,8 @@
+.venv
+data
+tests
+editor-build
+scripts
+__pycache__
+*.pyc
+.pytest_cache

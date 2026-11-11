@@ -1,0 +1,14 @@
+{
+  "name": "relay-editor-build",
+  "private": true,
+  "description": "Builds the vendored TipTap bundle served from relay/static/vendor. Only needed when changing editor dependencies.",
+  "dependencies": {
+    "@tiptap/core": "^2.11.5",
+    "@tiptap/starter-kit": "^2.11.5",
+    "@tiptap/extension-underline": "^2.11.5",
+    "@tiptap/extension-placeholder": "^2.11.5"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.2"
+  }
+}

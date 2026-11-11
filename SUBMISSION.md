@@ -2,7 +2,7 @@
 
 ## Reviewer links
 
-- Google Drive folder: TODO, add the folder link after uploading.
+- Google Drive folder: https://drive.google.com/drive/folders/18AqFqc0OAZSdnclcpsmpUwZXlRkIRw16
 - Live application: https://relay-docs-w94c.onrender.com (also in `LIVE_URL.txt`). The free instance sleeps when idle, so the first request can take up to a minute.
 - Source repository: https://github.com/coderedchan/AJAIA_ASSESS_PRO
 - Walkthrough video: see `WALKTHROUGH_URL.txt`.
@@ -60,6 +60,6 @@ See `README.md`. The application is in `source/`. After installing, run `flask -
 ## Completion status
 
 - **Working:** every core requirement (create, rename, rich text, autosave and reopen, import, ownership, sharing with owned and shared views, and persistence) and the review request with "Needs your attention". Also working: save-conflict detection that holds for simultaneous saves, handoff actions that wait for edits to be saved, access removal, and a phone-width layout.
-- **Not yet done:** the walkthrough recording and the Drive upload. The TODO lines above and in `WALKTHROUGH_URL.txt` mark them.
+- **Not yet done:** the walkthrough recording. `WALKTHROUGH_URL.txt` marks it.
 - **Limits:** no merging of simultaneous edits (a conflict is detected and the user chooses a version), mocked sign-in, and no deletion or view-only role. Data survives restarts when the SQLite file is on persistent storage. On the free Render plan it is not, so the data resets to the seeded state when the service restarts.
 - **Next 2 to 4 hours:** persistent hosting storage, a "changed since handoff" diff for the owner, periodic refresh of the card and dashboard, then a view-only role and deletion. Details are in `ARCHITECTURE.md`.
